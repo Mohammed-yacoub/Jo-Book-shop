@@ -10,17 +10,13 @@ class BackArrow extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return  Positioned(
-      top: size.height * 0.04,
-      left: size.width * 0.08,
-      child: GestureDetector(
+    return GestureDetector(
         onTap: (){Navigator.pop(context);},
         child: const Icon(
           Icons.arrow_back_ios,
           color: primaryColor,
           size: 32,
         ),
-      ),
     );
   }
 }
